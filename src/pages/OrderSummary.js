@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-const OrderSummary = ({ cart, total, clearCart, addToCart }) => {
+const OrderSummary = ({ cart, total, clearCart, addToCart, addToPurchaseHistory }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  Modal.setAppElement('#root');
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -13,6 +15,8 @@ const OrderSummary = ({ cart, total, clearCart, addToCart }) => {
   };
 
   const finalizePurchase = () => {
+    // Registre o pedido no histórico de compras antes de limpar o carrinho
+    addToPurchaseHistory(cart, total);
     clearCart();
     closeModal();
   };

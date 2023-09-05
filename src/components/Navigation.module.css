@@ -1,29 +1,55 @@
-
-nav{
-    border-right:1px solid #3c413e52;
+.container__nav{
+    border-right: 1px solid #3c413e52;
     padding: .4rem;
     background-color:#ADC4CE ;
     height: 100vh;
 }
 
-nav div {
+.nav__titulo {
     display: flex;
     justify-content: center;
     margin: .5rem;
 }
-ul{
+.nav__ul{
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
 }
-li{
+.nav__ul_li{
     margin: 1.5rem;
     list-style: none;
 }
-a{
+.nav__ul_li a{
     margin: .5rem;
     color: #F1F0E8;
     font-size: 1.2rem;
     text-decoration: none;
+}
+
+.button__gerente {
+    border: 1px solid black;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.input__gerente {
+    margin: 1rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #3c413e;
+    outline: none;
+}
+
+.input__gerente::placeholder {
+    color: black;
+}
+
+.container__gerente {
+    display: flex;
+    flex-direction: column;
 }

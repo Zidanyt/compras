@@ -1,23 +1,44 @@
-// ProductList.js
 import React, { Component } from 'react';
 
 class ProductList extends Component {
-  addToCart = product => {
-    this.props.addToCart(product);
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      searchTerm: '',
+    };
+  }
+
+  handleSearchChange = (event) => {
+    this.setState({
+      searchTerm: event.target.value,
+    });
   };
 
   render() {
-    const { products } = this.props;
-    console.log('Lista de produtos:', products);
+    const { products, addToCart } = this.props; // Receba a função addToCart das props
+
+    const { searchTerm } = this.state;
+
+    // Filtrar produtos com base no termo de pesquisa
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
       <div>
         <h2>Produtos Disponíveis</h2>
+        <input
+          type="text"
+          placeholder="Pesquisar produtos"
+          value={searchTerm}
+          onChange={this.handleSearchChange}
+        />
         <ul>
-          {products.map(product => (
+          {filteredProducts.map((product) => (
             <li key={product.id}>
               {product.name} - R${product.price}{' '}
-              <button onClick={() => this.addToCart(product)}>
+              <button onClick={() => addToCart(product)}>
                 Adicionar ao Carrinho
               </button>
             </li>
