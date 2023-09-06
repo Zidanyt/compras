@@ -1,4 +1,3 @@
-// AddProductForm.js
 import React, { Component } from 'react';
 
 import style from './AddProductForm.module.css'
@@ -16,10 +15,14 @@ class AddProductForm extends Component {
 
   handleAddProduct = () => {
     const { name, price } = this.state;
+
+    // Formate o preço com duas casas decimais
+    const formattedPrice = parseFloat(price).toFixed(2);
+
     const newProduct = {
       id: Date.now(),
       name,
-      price: parseFloat(price),
+      price: formattedPrice,
     };
   
     this.props.addProduct(newProduct);
