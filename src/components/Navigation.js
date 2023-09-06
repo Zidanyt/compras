@@ -9,7 +9,7 @@ import { Link, useNavigate } from 'react-router-dom'; // Importe useNavigate
 const Navigation = () => {
   const [isManager, setIsManager] = useState(false);
   const [password, setPassword] = useState('');
-  const managerPassword = 'zidany'; // Defina sua senha de gerente aqui
+  const managerPassword = 'adm'; // Defina sua senha de gerente aqui
   const navigate = useNavigate(); // Use o hook useNavigate para obter a função de navegação
 
   const handleLoginClick = () => {
