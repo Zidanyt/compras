@@ -21,15 +21,6 @@ const OrderSummary = ({ cart, total, clearCart, addToCart, addToPurchaseHistory 
     closeModal();
   };
 
-  const addMoreProducts = () => {
-    const exampleProduct = {
-      id: 6,
-      name: 'Produto 6',
-      price: 60,
-    };
-    addToCart(exampleProduct);
-  };
-
   return (
     <div>
       <h2>Resumo do Pedido</h2>
