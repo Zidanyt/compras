@@ -1,13 +1,11 @@
-.icon__01{
-    width: 30.5rem;height: 25rem;
-    margin-left: 45px;
-    object-fit: cover;
-}
 .main_{
+    width: 100%;
     display: flex;
-    margin-top: 1px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 .pesquisa{
 margin-top: 30px;
 border: none;
@@ -18,4 +16,10 @@ width: 120px;
 }
 .h2_{
     margin-top: 30px;
+}
+
+.icon__01{
+    width: 30.5rem;height: 25rem;
+    /* margin-left: 45px; */
+    object-fit: cover;
 }
