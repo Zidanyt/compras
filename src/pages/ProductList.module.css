@@ -1,0 +1,21 @@
+.icon__01{
+    width: 80%;height: 50%;
+    margin-left: 45px;
+}
+.main_{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+.pesquisa{
+margin-top: 30px;
+border: none;
+background-color: #96B6C5;
+border-bottom: 1px solid;
+outline: none;
+width: 120px;
+}
+.h2_{
+    margin-top: 30px;
+}

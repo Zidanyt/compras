@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import  Image  from '../img/Data extraction-cuate.png';
+import style from './ProductList.module.css'
 
 class ProductList extends Component {
   constructor(props) {
@@ -26,9 +28,10 @@ class ProductList extends Component {
     );
 
     return (
-      <div>
-        <h2>Produtos Disponíveis</h2>
-        <input
+      <div className={style.main_}>
+        <h2 className={style.h2_} >Produtos Disponíveis</h2>
+        <input 
+        className={style.pesquisa}
           type="text"
           placeholder="Pesquisar produtos"
           value={searchTerm}
@@ -44,6 +47,9 @@ class ProductList extends Component {
             </li>
           ))}
         </ul>
+        <div>
+          <img src={Image} className={style.icon__01} />
+        </div>
       </div>
     );
   }

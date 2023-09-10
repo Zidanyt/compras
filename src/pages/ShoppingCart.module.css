@@ -1,0 +1,7 @@
+.main__02{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+   justify-self: center;
+   margin-right: 30%;
+}

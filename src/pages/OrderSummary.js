@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import style from './OrderSummary.module.css'
 
 const OrderSummary = ({ cart, total, clearCart, addToCart, addToPurchaseHistory }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +23,7 @@ const OrderSummary = ({ cart, total, clearCart, addToCart, addToPurchaseHistory 
   };
 
   return (
-    <div>
+    <div className={style.main__03}>
       <h2>Resumo do Pedido</h2>
       <ul>
         {cart.map(item => (

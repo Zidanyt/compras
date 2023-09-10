@@ -1,8 +1,9 @@
 import React from 'react';
+import style from './ShoppingCart.module.css'
 
 const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
   return (
-    <div>
+    <div className={style.main__02}>
       <h2>Carrinho de Compras</h2>
       {cart.map((item) => (
         <div key={item.id} className="cart-item">

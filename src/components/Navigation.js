@@ -33,7 +33,7 @@ const Navigation = () => {
         <Icon.CartCheck size='30' />
         <h1>Aplicativo de Compras</h1>
       </div>
-      <ul className={style.nav__ul}>
+      <ul className={style.nav__ul } >
         <li className={style.nav__ul_li}>
           <Icon.HandbagFill size='20' />
           <Link to="/products">Produtos</Link>
