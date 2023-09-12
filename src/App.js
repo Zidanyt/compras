@@ -154,6 +154,7 @@ completeOrder = () => {
       console.log('Produto adicionado:', newProduct);
     });
   };
+  
 
   render() {
     const total = this.state.cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -200,3 +201,17 @@ completeOrder = () => {
 }
 
 export default App;
+
+
+
+// clearLocalStorage = () => {
+//   localStorage.clear();
+//   // Após a limpeza, você também pode redefinir o estado da sua aplicação para o estado inicial, se necessário.
+//   this.setState({
+//     products: [], // Redefina os produtos, carrinho e histórico de compras, se aplicável
+//     cart: [],
+//     purchaseHistory: [],
+//   });
+// };
+
+{/* <button onClick={this.clearLocalStorage}>Limpar Dados</button> */}

@@ -70,6 +70,7 @@ const Navigation = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </form>
+            
             <button className={style.button__gerente} onClick={handleLoginClick}>Entrar como Gerente</button>
           </li>
         )}
