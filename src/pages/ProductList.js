@@ -15,7 +15,7 @@ class ProductList extends Component {
     this.setState({
       searchTerm: event.target.value,
     });
-  };
+  }; 
 
   render() {
     const { products, addToCart } = this.props; // Receba a função addToCart das props
@@ -26,6 +26,12 @@ class ProductList extends Component {
     const filteredProducts = products.filter((product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const productImages = {
+      "teste01": "/images/teste01.jpg", // Mapeie o nome do produto à URL da imagem
+      "teste02": "/images/teste02.jpg",
+      // Adicione mais produtos e imagens conforme necessário
+    };
 
     return (
       <div className={style.main_}>
@@ -40,6 +46,7 @@ class ProductList extends Component {
         <ul>
           {filteredProducts.map((product) => (
             <li key={product.id}>
+              <img width={'100px'} src={process.env.PUBLIC_URL + productImages[product.name]} alt={product.name} />
               {product.name} - R${product.price}{' '}
               <button onClick={() => addToCart(product)}>
                 Adicionar ao Carrinho
