@@ -28,9 +28,9 @@ class ProductList extends Component {
     );
 
     const productImages = {
-      "teste01": "/images/teste01.jpg", // Mapeie o nome do produto à URL da imagem
+      "teste01": "/images/teste01.jpg",
       "teste02": "/images/teste02.jpg",
-      // Adicione mais produtos e imagens conforme necessário
+      
     };
 
     return (
