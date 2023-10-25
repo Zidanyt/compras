@@ -18,8 +18,8 @@ width: 120px;
     margin-top: 30px;
 }
 
-.icon__01{
-    width: 30.5rem;height: 25rem;
-    /* margin-left: 45px; */
+.img__protudo {
+    width: 100px;
+    height: 150px;
     object-fit: cover;
 }

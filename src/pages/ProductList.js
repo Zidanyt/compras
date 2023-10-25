@@ -46,7 +46,7 @@ class ProductList extends Component {
         <ul>
           {filteredProducts.map((product) => (
             <li key={product.id}>
-              <img width={'100px'} src={process.env.PUBLIC_URL + productImages[product.name]} alt={product.name} />
+              <img className={style.img__protudo} src={process.env.PUBLIC_URL + productImages[product.name]} alt={product.name} />
               {product.name} - R${product.price}{' '}
               <button onClick={() => addToCart(product)}>
                 Adicionar ao Carrinho
@@ -55,7 +55,6 @@ class ProductList extends Component {
           ))}
         </ul>
         <div>
-          <img src={Image} className={style.icon__01} />
         </div>
       </div>
     );
